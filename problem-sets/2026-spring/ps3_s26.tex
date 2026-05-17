@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{braket}
+
+
+\newcommand{\op}[1]{\operatorname{#1}}
+\newcommand{\tinyspace}{\mspace{1mu}}
+
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\bigabs}[1]{\bigl\lvert #1 \bigr\rvert}
+\newcommand{\Bigabs}[1]{\Bigl\lvert #1 \Bigr\rvert}
+\newcommand{\biggabs}[1]{\biggl\lvert #1 \biggr\rvert}
+\newcommand{\Biggabs}[1]{\Biggl\lvert #1 \Biggr\rvert}
+
+\renewcommand{\natural}{\mathbb{N}}
+\newcommand{\rev}{\textup{\tiny R}}
+
+\newenvironment{mylist}[1]{\begin{list}{}{
+	\setlength{\leftmargin}{#1}
+	\setlength{\rightmargin}{0mm}
+	\setlength{\labelsep}{2mm}
+	\setlength{\labelwidth}{8mm}
+	\setlength{\itemsep}{0mm}}}
+	{\end{list}}
+	
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CSE 309 Theory of Automata} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{#4}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\begin{document}
+
+\lecture{Problem Set 3}{\textit{Assigned: Friday, 27 Mar}}{Spring 2026}{Due: \textit{11:59 pm Monday, 13 Apr}}
+
+\centerline{{\Large To facilitate grading and timely feedback}}
+\centerline{{\Large please note that all submissions are through \href{http://gradescope.com}{Gradescope}.}}
+\centerline{{\Large Solve each problem on a new page.}}
+\centerline{{\Large Please clearly identify collaborator names and the resources used for each problem.}}
+
+\begin{enumerate}
+
+\item For each $n$, let $p(n)$ by the fraction of strings in $\{0,1\}^n$ that represent a zero-input Turing machine that halts when run starting from a blank tape. This means that a $1-p(n)$ fraction of these strings are either invalid Turing machine representations, or represent machines that run forever.
+\begin{enumerate}
+\item Describe an algorithm $M(i, n)$ to compute asymptotically good lower bounds $p_i(n)$ that
+converge to $p(n)$ from below as $i \to \infty$. This means that $p_i(n) \leq p(n)$, and that for every $n$ there are only finitely many $i$ for which $p_i(n) \neq p(n)$.
+
+\item Why doesn't the algorithm in part (a) immediately allow you to compute $p(n)$?
+
+\item Show that the function $p(n)$ is not computable.
+
+\item Show that there is no algorithm $N(i,n)$ that is like $M(i,n)$ from part (a), but computes  upper bounds rather than a lower bounds.
+\end{enumerate}
+
+
+\item For each of the following languages, determine whether the language is decidable and whether
+it is recognizable, and prove your answer.
+\begin{enumerate}
+\item $L_3 = \{ ( \langle M_1 \rangle , \langle M_2 \rangle ) \, | \, M_1() \textrm{ or $M_2()$ accepts (or both) } \}$
+\item $L_4 = \{ \langle M \rangle \, | \, L(M) \textrm{ is infinite and $\overline{L(M)}$ is also infinite} \}$
+\end{enumerate}
+
+
+\item Let $\langle M \rangle$ be the encoding of a Turing Machine. We define the following languages:
+\begin{align*}
+HALT &= \{\langle M \rangle \, | \, M() \textrm{ halts} \} \\
+FiniteCell &= \{\langle M \rangle \, | \, \textrm{the total number of tape cells $M()$ ever visits is finite} \}.
+\end{align*}
+
+\begin{enumerate}
+\item Is $FiniteCell \subseteq HALT$ ? (If yes, explain why; if no, describe an element of $FiniteCell$ not in $HALT$.)
+\item Is $HALT \subseteq FiniteCell$? (If yes, explain why; if no, describe an element of $HALT$ not in $FiniteCell$.)
+\item Is $FiniteCell \leq_T HALT$? (If yes, describe a reduction; if no, explain why not.)
+\item Is $HALT \leq_T FiniteCell$? (If yes, describe a reduction; if no, explain why not.)
+\end{enumerate}
+
+\item Let $\langle M \rangle$ be the encoding of a Turing Machine. We define the following languages:
+\begin{align*}
+ChillyHALT &= \{ (\langle M \rangle , x) \, | \, M^{HALT} (x) \textrm{ halts}\} \\
+FinLeft &= \{ \langle M \rangle \, | \, \textrm{the max distance tape head moves to the left of initial location is finite} \} \\
+FinHALT &= \{\langle M \rangle \, | \, M(x) \textrm{ halts for at most finitely many inputs $x$} \}.
+\end{align*}
+For this question you can use the fact that $ChillyHALT$ is Turing-equivalent to $FinHALT$.
+\begin{enumerate}
+
+\item  Show that $FinLeft \leq_T ChillyHALT$.
+
+\item Show that $ChillyHALT \leq_T FinLeft$.
+\end{enumerate}
+
+\item Given a string $x \in \{0, 1\}^n$, recall that $K(x)$ is the length of the shortest
+program $P$ (in some universal programming language) such that $P() = x$. We proved in class that
+the function $K$ is uncomputable. Note that in our current definition the program $P$ takes no input.
+\begin{enumerate}
+\item Show that $K \leq_T HALT$ . 
+
+\item Let $K^{HALT}(x)$, the ``Chilly Kolmogorov complexity'' of $x$, be the length of the shortest program $P$ such that $P^{HALT} () = x$. By adapting the proof given in class for the uncomputability of $K$, show that $K^{HALT} \not \leq_T HALT$.
+
+\item \emph{Bonus.} Show that for every $n$, there exists a string $x \in \{0, 1\}^n$ such that $K^{HALT} (x) = O (\log n)$ even though $K (x) = \Omega(n)$.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
