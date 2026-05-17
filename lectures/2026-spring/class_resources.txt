@@ -1,0 +1,53 @@
+Introduction to Strings on Wiki
+https://en.wikipedia.org/wiki/String_(computer_science)#Formal_theory
+
+More detailed notes on Strings
+http://jeffe.cs.illinois.edu/teaching/algorithms/models/01-strings.pdf
+
+John Watrous course notes at Waterloo
+https://cs.uwaterloo.ca/~watrous/ToC-notes/
+
+Automata course at Stanford
+https://www.youtube.com/channel/UCHuRxy3-6SNP2mQt2MOoWiw
+
+Jeff Erickson notes at Illinois
+http://jeffe.cs.illinois.edu/teaching/algorithms/models/all-models.pdf
+
+CMU course with slightly different focus
+https://www.cs.cmu.edu/~./15251/
+
+Great Ideas in Theoretic Computer Science at MIT
+https://www.scottaaronson.com/blog/?cat=27
+
+Nature of Computation links
+http://www.nature-of-computation.org/~moore/noc/links/
+
+Logicomix
+https://www.amazon.com/Logicomix-search-truth-Apostolos-Doxiadis/dp/1596914521
+
+Types of Infinity
+https://vimeo.com/showcase/11667257?video=147535698
+
+We're in Now Now
+https://m.youtube.com/watch?v=fIyYTN86_Uk
+
+Poem on the Halting problem
+http://www.lel.ed.ac.uk/~gpullum/loopsnoop.html
+
+Zero Knowledge Proofs using Where's Wally
+https://medium.com/swlh/a-zero-knowledge-proof-for-wheres-wally-930c21e55399
+
+The Gödel letter
+https://rjlipton.wordpress.com/the-gdel-letter/
+
+What if
+https://what-if.xkcd.com/
+
+Thing Explainer
+https://xkcd.com/thing-explainer/
+
+John Nash letters to NSA
+https://www.nsa.gov/Portals/70/documents/news-features/declassified-documents/nash-letters/nash_letters1.pdf
+
+Research in Theory of Computing
+https://simons.berkeley.edu/homepage
