@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{braket}
+
+
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CSE 309 Theory of Automata} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{#4}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\begin{document}
+
+\lecture{Problem Set 1}{\textit{Assigned: Wednesday, 28 Jan}}{Spring 2026}{Due: \textit{11:59 pm Monday, 9 Feb.}}
+
+\centerline{{\Large To facilitate grading and timely feedback}}
+\centerline{{\Large please note that all submissions are through \href{http://gradescope.com}{Gradescope}.}}
+\centerline{{\Large Solve each problem on a new page.}}
+\centerline{{\Large Please clearly identify collaborator names and the resources used for each problem.}}
+\begin{enumerate}
+
+\item Using his intuition that languages accepted by finite automata require remembering only a finite pattern, Sheikh Chilly would like to argue that the following language $L_n$ is not regular. \emph{Obviously, he argues, remembering multiples of a given integer $n$ requires unbounded memory.} For the alphabet $\Sigma = \{ 0, 1\}$, let the language $L_n$ be given by
+\begin{equation*}  
+L_n = \{w \in \Sigma^* \, | \, w \textrm{ is a binary number that is a multiple of } n \} \, ,
+\end{equation*}  
+for $n \geq 1$. Show that for all valid choices of $n$, the language $L_n$ is regular.
+
+
+\item Convert the following NFA into a DFA.
+\begin{figure}[h]
+\begin{center}
+\scalebox{1}{\includegraphics{nfa.png}}
+\end{center}
+\end{figure}
+
+\item Let $\Sigma = \{a,b\}$ and $L_k = \{ ww : w \in \Sigma^* \textrm{ and $w$ is of length $k$}\}$. Show that for each $k$, no DFA can recognize $L_k$ with fewer than $2^k$ states.
+
+\item For languages $A$ and $B$, let the \emph{interleave} of $A$ and $B$ be the language
+\begin{equation*}
+\{w \,| \, w = a_1b_1 \ldots a_kb_k, \textrm{ where } a_1 \ldots a_k \in A \textrm{ and } b_1 \ldots b_k \in B, \textrm{ each } a_i, b_i \in \Sigma \}.
+\end{equation*}
+Show that the class of regular languages is closed under \emph{interleave}.
+
+\item Let $L = \{1^n : n \textrm{ is composite}\}$. Show that $L$ is not regular.
+
+
+\end{enumerate}
+\end{document}
+
