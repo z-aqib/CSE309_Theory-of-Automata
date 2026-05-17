@@ -1,245 +1,657 @@
-# CSE309 — Theory of Automata (IBA) | Resource Repository
+# CSE309 — Theory of Automata | Study and Past-Paper Archive
 
-This repository is a **one-stop, exam-focused resource hub** for **CSE309: Theory of Automata** at IBA Karachi. It consolidates **past papers, quizzes, problem sets, tutorials, lecture decks, topical notes, and curated external university resources** across multiple semesters so students can **practice patterns**, **cover gaps across offerings**, and **prepare efficiently** without spending hours hunting material.
+This repository is a comprehensive, exam-focused resource hub for **CSE309: Theory of Automata** at the **Institute of Business Administration (IBA), Karachi**.
+
+It consolidates **past papers, quizzes, problem sets, worked solutions, weekly exercises, tutorials, lecture material, topical practice, textbooks, and external university resources** collected across several course offerings. The aim is to provide students with a single, organized place to practise recurring question styles, strengthen difficult concepts, compare coverage across semesters, and prepare for quizzes, midterms, and final examinations.
+
+Although the repository is primarily built around **IBA course offerings**, the underlying material covers standard Theory of Computation topics and can be used by students from **any university** studying automata, formal languages, computability, complexity theory, or related subjects.
 
 **Maintainer:** Zuha Aqib  
-**Purpose:** Student support (practice + revision) and long-term consolidation of high-quality Automata resources.
+**Coverage:** Fall 2022 to Spring 2026, with additional external resources  
+**Purpose:** Long-term student support, exam preparation, and preservation of useful academic material
 
 ---
 
 ## Table of Contents
-- [Why this repository exists](#why-this-repository-exists)
-- [Teaching/learning context](#teachinglearning-context)
-- [Important note on adding new semester material](#important-note-on-adding-new-semester-material)
+
+- [Why This Repository Exists](#why-this-repository-exists)
+- [Academic and Teaching Context](#academic-and-teaching-context)
+- [Repository Coverage](#repository-coverage)
+- [Spring 2026 Collection](#spring-2026-collection)
 - [Quick Links](#quick-links)
-- [How to use this repo (recommended exam-first workflow)](#how-to-use-this-repo-recommended-exam-first-workflow)
-- [Repository structure](#repository-structure)
-- [What to practice for each major topic](#what-to-practice-for-each-major-topic)
-- [External resources included](#external-resources-included)
-- [Academic integrity](#academic-integrity)
+- [How to Use This Repository](#how-to-use-this-repository)
+- [Repository Structure](#repository-structure)
+- [Topic-Based Resource Guide](#topic-based-resource-guide)
+- [External Resources](#external-resources)
+- [Important Usage Notes](#important-usage-notes)
 - [Contributing](#contributing)
+- [Academic Integrity](#academic-integrity)
+- [Acknowledgements](#acknowledgements)
 
 ---
 
-## Why this repository exists
-CSE309 is one of those courses where **past assessments matter**: patterns repeat, proof styles become predictable, and strong practice comes from seeing *how questions are asked across multiple offerings*. Students also often face a common problem:
+## Why This Repository Exists
 
-- One semester has stronger materials for **regular languages**, another has better **CFG/PDA** coverage, another has more structured **decidability / reductions**, etc.
-- Students end up searching across seniors’ drives, random groups, and scattered links.
+Theory of Automata is a conceptually demanding course that requires more than reading definitions or memorizing constructions. Students need repeated practice with:
 
-This repo fixes that by consolidating **everything useful in one place**:
-- Past **quizzes**, **midterms**, **finals**
-- **Problem sets/homework** (and in some cases solutions or marking guidance)
-- **Tutorials** (great for bridging concepts → exam-style questions)
-- **Topical practice notes and links**
-- Carefully chosen external resources I personally used while studying
+- automata and grammar design;
+- mathematical proofs;
+- reductions;
+- decidability arguments;
+- complexity classifications;
+- unfamiliar variations of previously studied problems; and
+- clearly written explanations of abstract computational ideas.
+
+Useful material is often scattered across LMS pages, personal drives, class groups, seniors’ folders, and unrelated websites. Moreover, the exact topic coverage and style of assessment may vary between instructors and semesters.
+
+This repository brings those materials together as a **long-term past-paper and study archive**.
+
+Past assessments should be used for **practice and pattern recognition**, not as predictions of future examinations.
 
 ---
 
-## Teaching/learning context
-I created and maintain this repo based on my own journey through the course and TA experiences:
+## Academic and Teaching Context
 
-- **Took CSE309 in Spring 2024** — Instructor: **Dr. Shahid Hussain** (Chairperson, CS Department)
-- **TA in Fall 2024** — Instructor: **Dr. Asma Sanam Larik**
-- **TA in Spring 2025** — Instructor: **Dr. Shahid Hussain**
-- **TA in Spring 2026** — Instructor: **Dr. Jibran Rashid** (current)
+I created and maintain this repository based on my experience with the course as both a student and a Teaching Assistant:
 
-The resources here include material from IBA offerings and external sources that helped me personally while preparing.
+| Semester | Role | Instructor |
+|---|---|---|
+| Spring 2024 | Student | Dr. Shahid Hussain |
+| Fall 2024 | Teaching Assistant | Dr. Asma Sanam Larik |
+| Spring 2025 | Teaching Assistant | Dr. Shahid Hussain |
+| Spring 2026 | Teaching Assistant | Dr. Jibran Rashid |
+
+The repository also includes selected resources from older offerings, material shared by seniors and classmates, and external university resources that were useful while studying the course.
+
+---
+
+## Repository Coverage
+
+The archive currently contains material associated with the following semesters:
+
+| Semester | Available Material |
+|---|---|
+| Fall 2022 | Midterm and final examination resources |
+| Summer 2023 | Lectures, problem sets, quiz material, and practice questions |
+| Spring 2024 | Course outline, lectures, tutorials, quizzes, problem sets, sample exams, personal solutions, and topical material |
+| Fall 2024 | Course outline, lectures, tutorials, quizzes, problem sets, solutions, and marking criteria |
+| Spring 2025 | Course outline, lectures, tutorials, quizzes, homework, sample paper, and solved midterm |
+| Spring 2026 | Course outline, lectures, weekly exercises, quizzes, problem sets, solutions, source files, class resources, and midterm |
+| External sources | Sipser-related material and additional university practice sets with answers |
+
+Not every semester contains every assessment category. The value of the archive comes from combining material across offerings rather than treating any one folder as a complete course.
+
+---
+
+## Spring 2026 Collection
+
+Spring 2026 was taught by **Dr. Jibran Rashid** and introduced a substantial collection of new material to the repository.
+
+The course emphasized mathematical modelling, computational frameworks, computability, complexity, NP-completeness, and selected ideas from the frontiers of theoretical computer science.
+
+### Materials added
+
+#### Course outline
+
+- [`cse309_ToA_spring_2026.pdf`](./cse309_ToA_spring_2026.pdf)
+
+#### Lectures and class resources
+
+- [`lectures/2026-spring/`](./lectures/2026-spring/)
+
+This folder includes dated lecture material from across the semester, along with:
+
+- `JFLAP_Thin.jar`
+- `class_resources.txt`
+- additional readings and visual material related to:
+  - incompleteness;
+  - the Mermin–Peres square;
+  - multipartite nonlocality; and
+  - open problems in theoretical computer science.
+
+#### Weekly exercises
+
+- [`exercises/2026-spring/`](./exercises/2026-spring/)
+
+The folder contains ten weekly exercise sets:
+
+- `e01_s26.pdf` through `e10_s26.pdf`
+
+These are especially useful for regular practice because they were designed to reinforce weekly concepts through shorter and comparatively focused questions.
+
+#### Quizzes
+
+- [`quizzes/2026-spring/`](./quizzes/2026-spring/)
+
+The Spring 2026 collection includes:
+
+- Quiz 0
+- Quiz 1
+- Quiz 2
+- Quiz 3
+- Quiz 4
+
+#### Problem sets and solutions
+
+- [`problem-sets/2026-spring/`](./problem-sets/2026-spring/)
+
+Four problem sets are included. Their folders contain combinations of:
+
+- the original problem-set PDF;
+- the LaTeX source;
+- page-by-page solution images; and
+- an additional bonus-challenge solution where applicable.
+
+These files can help students practise both the mathematical content and the presentation of rigorous written solutions.
+
+#### Midterm
+
+- [`exams/mid-exam/2026-spring/`](./exams/mid-exam/2026-spring/)
+
+This folder contains the Spring 2026 midterm paper.
 
 ---
 
 ## Quick Links
-### IBA Course Outlines (past offerings)
-- `cse309_ToA_spring_2024.pdf`
-- `cse309_ToA_fall_2024.pdf`
-- `cse309_ToA_spring_2025.pdf`
 
-### High-value exam preparation
-- **Midterm resources:** [`mid_exam/`](./mid_exam)
-- **Final resources:** [`final_exam/`](./final_exam)
-- **Quizzes (practice + solutions where available):** [`quizzes/`](./quizzes)
-- **Problem sets/homework:** [`problem_sets/`](./problem_sets)
-- **Tutorials (exam-style walkthroughs):** [`tutorials/`](./tutorials)
+### Course outlines
 
-### Topic-wise reinforcement
-- **Topical notes + drills:** [`practice_topical/`](./practice_topical)
-- **Hard questions:** [`practice_hard_qs/`](./practice_hard_qs)
+- [Spring 2024](./cse309_ToA_spring_2024.pdf)
+- [Fall 2024](./cse309_ToA_fall_2024.pdf)
+- [Spring 2025](./cse309_ToA_spring_2025.pdf)
+- [Spring 2026](./cse309_ToA_spring_2026.pdf)
 
-### Books & external packs (time-savers)
-- **Primary course textbook:** [`book/`](./book)
-- **Sipser / MIT-style practice pack:** [`CS_Michael_Sipser/`](./CS_Michael_Sipser)
-- **Additional university practice sets + answers:** [`CS341_Elaine_Rich/`](./CS341_Elaine_Rich)
+### Exam preparation
 
----
+- [All exams](./exams/)
+- [Midterm papers and solutions](./exams/mid-exam/)
+- [Final papers and solutions](./exams/final-exam/)
+- [Quizzes](./quizzes/)
+- [Problem sets and homework](./problem-sets/)
+- [Tutorial material](./tutorials/)
 
-## How to use this repo (recommended exam-first workflow)
-This workflow is designed for a student who wants results quickly and wants to practice like an exam.
+### Practice and revision
 
-### Step 1 — Start from past assessments (pattern recognition)
-1. Open **past quizzes**: [`quizzes/`](./quizzes)  
-2. Open **past midterms**: [`mid_exam/`](./mid_exam)  
-3. Open **past finals**: [`final_exam/`](./final_exam)
+- [All exercises](./exercises/)
+- [Spring 2026 weekly exercises](./exercises/2026-spring/)
+- [Topic-based practice](./exercises/practice-topical/)
+- [Challenging practice questions](./exercises/practice-hard-qs/)
 
-While reviewing, note:
-- What topics are tested most
-- What proof styles repeat (especially in regular languages & CFG)
-- How reductions/decidability questions are framed
+### Lectures and references
 
-### Step 2 — Practice using problem sets (depth + difficulty)
-Go to: [`problem_sets/`](./problem_sets)  
-Problem sets are usually the best place to build real skill, especially for:
-- Regular expressions and automata construction
-- CFG design, ambiguity, derivations
-- PDA design and CFL arguments
-- Reductions and decidability structure
-- Complexity topics where included
-
-### Step 3 — Use tutorials to learn “how to write the solution”
-Go to: [`tutorials/`](./tutorials)  
-Tutorials help you learn:
-- The expected format of answers
-- How to structure proofs cleanly
-- Common mistakes and how to avoid them
-
-### Step 4 — Fill topic gaps using the topical folder
-Go to: [`practice_topical/`](./practice_topical)
-
-This is the best folder when you are:
-- weak in one topic,
-- or your current course coverage feels incomplete,
-- or you want extra drills before an assessment.
-
-### Step 5 — Use external packs for extra timed practice (optional)
-If you’ve done enough IBA material and want more:
-- [`CS_Michael_Sipser/`](./CS_Michael_Sipser)
-- [`CS341_Elaine_Rich/`](./CS341_Elaine_Rich)
-
-These are included to save you time searching—use them after your core prep is stable.
+- [Lecture material](./lectures/)
+- [Primary textbook](./book/)
+- [Michael Sipser resources](./CS-Michael-Sipser/)
+- [Elaine Rich practice resources](./CS341-Elaine-Rich/)
 
 ---
 
-## Repository structure
-```
+## How to Use This Repository
 
+This archive is most useful when approached by **assessment type and topic**, rather than by trying to follow one past semester from beginning to end.
+
+### 1. Review past assessments
+
+Begin with the assessment closest to the one for which you are preparing:
+
+- quizzes for short concept checks;
+- weekly exercises for regular reinforcement;
+- midterms for timed pre-mid practice;
+- finals for comprehensive revision; and
+- problem sets for deeper proofs and constructions.
+
+Relevant folders:
+
+- [`quizzes/`](./quizzes/)
+- [`exercises/2026-spring/`](./exercises/2026-spring/)
+- [`exams/mid-exam/`](./exams/mid-exam/)
+- [`exams/final-exam/`](./exams/final-exam/)
+- [`problem-sets/`](./problem-sets/)
+
+Do not immediately read a solution. First attempt the question independently and record where your reasoning breaks down.
+
+### 2. Identify recurring techniques
+
+While reviewing assessments from different semesters, look for repeated techniques rather than identical questions.
+
+Examples include:
+
+- converting an NFA to a DFA;
+- constructing regular expressions or automata for constrained languages;
+- using closure properties;
+- applying the pumping lemma;
+- constructing context-free grammars;
+- proving ambiguity or non-context-freeness;
+- designing Turing machines;
+- establishing decidability or undecidability;
+- constructing mapping reductions;
+- identifying P, NP, NP-hard, or NP-complete problems; and
+- writing complete correctness arguments.
+
+The exact wording may change, but the underlying reasoning patterns remain valuable.
+
+### 3. Use problem sets for depth
+
+Problem sets usually require more sustained reasoning than quizzes and are therefore among the most useful materials in the repository.
+
+The archive includes:
+
+- original problem statements;
+- selected student submissions;
+- official or reconstructed solutions where available;
+- marking criteria from Fall 2024;
+- LaTeX source files from Spring 2026; and
+- page-by-page solution material.
+
+Use solutions only after making a serious attempt. Compare not only the final answer but also:
+
+- how the proof is structured;
+- which assumptions are stated;
+- whether both directions of an equivalence are established;
+- how a construction is justified; and
+- how clearly the argument is communicated.
+
+### 4. Use lectures to fill conceptual gaps
+
+The lecture folders cover several instructor approaches and semesters. They should be treated as a **reference library**, not as a substitute for the lectures or syllabus of a current offering.
+
+When a topic is unclear:
+
+1. locate it in the topical-practice folder;
+2. compare lecture material from more than one semester;
+3. consult the textbook;
+4. attempt a related exercise; and
+5. return to a past assessment question.
+
+This is especially useful when one semester contains stronger coverage of a topic than another.
+
+### 5. Use external resources for additional practice
+
+After completing the relevant IBA material, use the external collections for more varied questions and solution styles:
+
+- [`CS-Michael-Sipser/`](./CS-Michael-Sipser/)
+- [`CS341-Elaine-Rich/`](./CS341-Elaine-Rich/)
+
+These resources are included to reduce the time students would otherwise spend searching across the internet.
+
+---
+
+## Repository Structure
+
+```text
 .
-├── book/                      # Primary course textbook (Sipser edition used in class)
-├── lectures/                  # Lecture decks/handouts by semester (for reference & gap coverage)
+├── cse309_ToA_fall_2024.pdf
+├── cse309_ToA_spring_2024.pdf
+├── cse309_ToA_spring_2025.pdf
+├── cse309_ToA_spring_2026.pdf
+│
+├── book/
+│   └── Primary Theory of Computation textbook
+│
+├── CS-Michael-Sipser/
+│   ├── Textbook
+│   ├── Lectures
+│   ├── Problem sets
+│   ├── Midterms
+│   └── Final examination resources
+│
+├── CS341-Elaine-Rich/
+│   ├── Midterm practice sets
+│   ├── Final practice set
+│   └── Answer keys
+│
+├── exams/
+│   ├── mid-exam/
+│   │   ├── 2022-fall/
+│   │   ├── 2024-spring-me/
+│   │   ├── 2025-spring/
+│   │   └── 2026-spring/
+│   └── final-exam/
+│       ├── 2022-fall/
+│       └── 2024-spring-me/
+│
+├── exercises/
+│   ├── 2026-spring/
+│   │   └── Ten weekly exercise sets
+│   ├── practice-hard-qs/
+│   └── practice-topical/
+│       ├── 2024-spring-me/
+│       ├── decidability/
+│       ├── np-reductions/
+│       ├── regular-languages/
+│       ├── time-complexity/
+│       └── links.txt
+│
+├── lectures/
 │   ├── 2023-summer/
 │   ├── 2024-fall/
-│   ├── 2024-spring_me/
-│   └── 2025-spring/
-├── tutorials/                 # TA tutorials and walkthroughs by semester
-│   ├── 2024-fall/
-│   ├── 2024-spring_me/
-│   └── 2025-spring/
-├── problem_sets/              # Homework / problem sets by semester (some include solutions/marking guides)
+│   ├── 2024-spring-me/
+│   ├── 2025-spring/
+│   └── 2026-spring/
+│
+├── problem-sets/
 │   ├── 2023-summer/
 │   ├── 2024-fall/
-│   ├── 2024-spring_me/
-│   └── 2025-spring/
-├── quizzes/                   # Quizzes (questions and/or solutions) by semester
+│   ├── 2024-spring-me/
+│   ├── 2025-spring/
+│   └── 2026-spring/
+│       ├── ps1/
+│       ├── ps2/
+│       ├── ps3/
+│       └── ps4/
+│
+├── quizzes/
 │   ├── 2023-summer/
 │   ├── 2024-fall/
-│   ├── 2024-spring_me/
-│   └── 2025-spring/
-├── mid_exam/                  # Midterm papers/solutions by semester
-│   ├── 2022-fall/
-│   ├── 2024-spring_me/
-│   └── 2025-spring/
-├── final_exam/                # Final papers/solutions by semester
-│   ├── 2022-fall/
-│   └── 2024-spring_me/
-├── practice_topical/          # Topic-wise practice + notes + helpful links
-│   ├── 2024-spring_me/        # Topic-wise notes/handouts from Spring 2024
-│   ├── decidability/
-│   ├── np_reductions/
-│   ├── regular_languages/
-│   ├── time_complexity/
-│   └── links.txt              # Useful links list
-├── practice_hard_qs/          # A small set of intentionally hard questions
-├── CS_Michael_Sipser/         # Sipser/MIT-style extra practice (problem sets/exams/solutions)
-└── CS341_Elaine_Rich/         # Additional university practice sets (often with answers)
-
+│   ├── 2024-spring-me/
+│   ├── 2025-spring/
+│   └── 2026-spring/
+│
+└── tutorials/
+    ├── 2024-fall/
+    ├── 2024-spring-me/
+    └── 2025-spring/
 ```
 
-**Note on lectures:** The lecture decks here are included as **reference and gap coverage** across offerings. Future students should use them to strengthen weak topics, not as a “current semester lecture set.”
+The folders are organized primarily by **resource type** and then by **semester**, making it easier to compare the same type of assessment across different offerings.
 
 ---
 
-## What to practice for each major topic
-Use this as a quick map to where you should practice depending on what you’re struggling with:
+## Topic-Based Resource Guide
 
-### Regular Languages (DFA/NFA/RE, closure, pumping, proofs)
-- `practice_topical/regular_languages/`
-- `lectures/2024-fall/` (practice-oriented lecture items)
-- `problem_sets/` (multiple semesters)
-- `quizzes/` (multiple semesters)
+### Foundations and Mathematical Preliminaries
 
-### CFG & CFL (grammars, derivations, ambiguity, CNF basics)
-- `lectures/2024-spring_me/`
-- `practice_topical/2024-spring_me/` (topic notes)
-- `problem_sets/` + `tutorials/`
+Topics may include:
 
-### PDA (design + reasoning)
-- `lectures/2024-fall/`
-- `tutorials/`
-- `problem_sets/`
+- alphabets, strings, and languages;
+- sets, relations, and functions;
+- proof techniques;
+- induction;
+- countability; and
+- formal mathematical notation.
 
-### Turing Machines (variants + constructions)
-- `lectures/2024-fall/`
-- `CS_Michael_Sipser/` for additional practice
+Useful folders:
 
-### Decidability / Undecidability (mapping reductions, HALT-style structure)
-- `practice_topical/decidability/`
-- `lectures/2024-fall/`
-- `problem_sets/` + `mid_exam/` + `final_exam/`
+- [`lectures/2024-spring-me/`](./lectures/2024-spring-me/)
+- [`lectures/2025-spring/`](./lectures/2025-spring/)
+- [`lectures/2026-spring/`](./lectures/2026-spring/)
+- [`exercises/2026-spring/`](./exercises/2026-spring/)
 
-### Reducibility / NP reductions (structure + correctness proofs)
-- `practice_topical/np_reductions/`
-- `practice_topical/2024-spring_me/` (topic notes)
-- `final_exam/` and advanced practice packs
+### Regular Languages
 
-### Time Complexity / Complexity Theory (where included)
-- `practice_topical/time_complexity/`
-- `lectures/2024-fall/`
-- `practice_topical/2024-spring_me/`
+Topics include:
+
+- deterministic finite automata;
+- nondeterministic finite automata;
+- NFA-to-DFA conversion;
+- regular expressions;
+- closure properties;
+- equivalence arguments;
+- non-regular languages; and
+- the pumping lemma.
+
+Useful folders:
+
+- [`exercises/practice-topical/regular-languages/`](./exercises/practice-topical/regular-languages/)
+- [`lectures/2024-fall/`](./lectures/2024-fall/)
+- [`problem-sets/`](./problem-sets/)
+- [`quizzes/`](./quizzes/)
+- [`tutorials/`](./tutorials/)
+
+### Context-Free Grammars and Languages
+
+Topics include:
+
+- CFG construction;
+- derivations;
+- parse trees;
+- ambiguity;
+- Chomsky normal form;
+- context-free languages; and
+- proofs involving CFLs.
+
+Useful folders:
+
+- [`exercises/practice-topical/2024-spring-me/`](./exercises/practice-topical/2024-spring-me/)
+- [`lectures/2024-spring-me/`](./lectures/2024-spring-me/)
+- [`lectures/2024-fall/`](./lectures/2024-fall/)
+- [`problem-sets/`](./problem-sets/)
+
+### Pushdown Automata
+
+Topics include:
+
+- PDA construction;
+- stack behaviour;
+- acceptance conditions;
+- relationships between PDAs and CFGs; and
+- reasoning about context-free languages.
+
+Useful folders:
+
+- [`lectures/2024-fall/`](./lectures/2024-fall/)
+- [`problem-sets/`](./problem-sets/)
+- [`tutorials/`](./tutorials/)
+
+### Turing Machines
+
+Topics include:
+
+- formal definitions;
+- machine construction;
+- multi-tape Turing machines;
+- nondeterministic Turing machines;
+- enumerators;
+- recognizable and decidable languages; and
+- equivalence between computational models.
+
+Useful folders:
+
+- [`lectures/2024-fall/`](./lectures/2024-fall/)
+- [`lectures/2026-spring/`](./lectures/2026-spring/)
+- [`CS-Michael-Sipser/`](./CS-Michael-Sipser/)
+- [`problem-sets/`](./problem-sets/)
+
+### Decidability and Undecidability
+
+Topics include:
+
+- decidable languages;
+- recognizable languages;
+- the acceptance problem;
+- the halting problem;
+- diagonalization;
+- Turing-unrecognizable languages;
+- undecidable language problems; and
+- proof construction.
+
+Useful folders:
+
+- [`exercises/practice-topical/decidability/`](./exercises/practice-topical/decidability/)
+- [`lectures/2024-fall/`](./lectures/2024-fall/)
+- [`lectures/2026-spring/`](./lectures/2026-spring/)
+- [`problem-sets/`](./problem-sets/)
+- [`exams/`](./exams/)
+
+### Reducibility
+
+Topics include:
+
+- mapping reductions;
+- reduction direction;
+- undecidability proofs;
+- Post Correspondence Problem;
+- language-theoretic reductions; and
+- proof correctness.
+
+Useful folders:
+
+- [`exercises/practice-topical/2024-spring-me/`](./exercises/practice-topical/2024-spring-me/)
+- [`exercises/practice-topical/decidability/`](./exercises/practice-topical/decidability/)
+- [`lectures/2024-fall/`](./lectures/2024-fall/)
+- [`problem-sets/`](./problem-sets/)
+- [`exams/final-exam/`](./exams/final-exam/)
+
+### Complexity Theory and NP-Completeness
+
+Topics include:
+
+- measuring time and space complexity;
+- P and NP;
+- polynomial-time reductions;
+- NP-hardness;
+- NP-completeness;
+- Cook–Levin-style reasoning;
+- common complete problems; and
+- computational intractability.
+
+Useful folders:
+
+- [`exercises/practice-topical/time-complexity/`](./exercises/practice-topical/time-complexity/)
+- [`exercises/practice-topical/np-reductions/`](./exercises/practice-topical/np-reductions/)
+- [`lectures/2024-fall/`](./lectures/2024-fall/)
+- [`lectures/2026-spring/`](./lectures/2026-spring/)
+- [`problem-sets/`](./problem-sets/)
+- [`exams/`](./exams/)
+
+### Frontier Topics
+
+The Spring 2026 materials also introduce selected advanced and open-ended topics, including:
+
+- incompleteness;
+- physical limitations on computational models;
+- the Mermin–Peres square;
+- quantum and non-classical computational perspectives;
+- multipartite nonlocality; and
+- open problems in theoretical computer science.
+
+These are available primarily in:
+
+- [`lectures/2026-spring/`](./lectures/2026-spring/)
 
 ---
 
-## External resources included
-Students often waste time searching for high-quality extra practice sets. I included the external resources I personally used during preparation so you can directly access them here:
+## Important Usage Notes
 
-- **Michael Sipser / MIT-style content**: `CS_Michael_Sipser/`  
-  Helpful for problem sets, exam-style questions, and solution style.
-- **Additional university practice sets**: `CS341_Elaine_Rich/`  
-  Useful for timed mid/final practice, with answers available.
+### This is an archive, not a current course page
 
-These should be used **after** you’ve covered the main IBA-style patterns.
+The repository contains material from **completed semesters**. Future offerings may:
 
----
+- follow a different order;
+- use different terminology;
+- include or exclude particular topics;
+- assign different assessment weights;
+- apply different proof conventions; or
+- use a different examination structure.
 
-## Academic integrity
-This repository is for learning and practice.
+Always follow the instructions and syllabus issued by your current instructor.
 
-- Follow your instructor’s policy for your current offering.
-- If a resource resembles an active assessment, do not misuse it.
-- For assignments: attempt first, then consult solutions (if present) strictly for learning.
-- If you reuse an idea in your write-up, cite appropriately.
+### Attempt questions before viewing solutions
+
+The main value of theoretical-computer-science problems lies in the reasoning process. Reading a solution without first attempting the problem may create familiarity without developing problem-solving ability.
+
+A useful approach is:
+
+1. attempt the question independently;
+2. write a complete solution;
+3. identify the exact point where you became stuck;
+4. consult a hint, lecture, or related example;
+5. attempt the problem again; and
+6. only then compare against an available solution.
+
+### Verify unofficial solutions
+
+Some files are student-created solutions or reconstructed answers rather than official instructor solutions. They are included because they may still be useful for comparison, but they should be checked critically against:
+
+- definitions;
+- lecture material;
+- textbook results; and
+- your current instructor’s expectations.
 
 ---
 
 ## Contributing
-Contributions are welcome if they improve student learning and comply with policy.
 
-Guidelines:
-- Place files in the correct folder (`quizzes/`, `mid_exam/`, `final_exam/`, `problem_sets/`, etc.)
-- Use clear filenames
-- Do not upload any material that violates instructor/university policy
-- Prefer adding resources **after** a semester ends unless explicitly permitted
+This repository is intended to remain useful beyond the semesters currently represented.
 
-If you contribute, include a short note describing:
-- what you added,
-- which topic it helps,
-- and how it should be used (practice / reference / solution / marking guide).
+Students, alumni, Teaching Assistants, and instructors may contribute additional material from:
+
+- earlier IBA offerings;
+- future IBA offerings after they have concluded;
+- other universities;
+- public course websites;
+- textbooks and supplementary references;
+- self-created topical practice; or
+- corrected and improved solutions.
+
+### Suitable contributions
+
+Examples include:
+
+- past quizzes, midterms, and finals;
+- problem sets or homework;
+- tutorial sheets;
+- lecture notes or slides;
+- official solutions or marking schemes;
+- carefully verified student solutions;
+- topic-based practice sets;
+- useful tools or visualizations;
+- links to publicly available university courses; and
+- corrections to existing material or documentation.
+
+### How to contribute
+
+1. Fork the repository.
+2. Add the material to the appropriate category and semester folder.
+3. Use a clear filename that identifies the resource.
+4. Update this README when the contribution changes the documented coverage.
+5. Open a pull request explaining:
+   - the source of the material;
+   - the semester or institution;
+   - whether it is official or student-created;
+   - whether a solution is included; and
+   - how the material may help students.
+
+For a smaller correction, missing link, uncertain file, or suggested resource, open an **Issue** instead.
+
+### Contribution requirements
+
+Please ensure that:
+
+- the material is permitted to be shared;
+- the associated semester has ended unless the instructor has explicitly authorized publication;
+- no active or confidential assessment is exposed;
+- the original source is acknowledged;
+- student-created answers are labelled appropriately;
+- personal information is removed where necessary; and
+- copyrighted material is only added where redistribution is permitted.
+
+Contributions from outside IBA are welcome. Clearly identify the university, course, semester, and source so that future students can understand the material’s context.
 
 ---
+
+## Academic Integrity
+
+This repository is provided for **learning, revision, and legitimate practice**.
+
+Students must:
+
+- follow the academic-integrity rules of their own institution and instructor;
+- avoid using archived solutions to complete active graded work;
+- never submit another person’s solution as their own;
+- acknowledge collaborators and sources where required;
+- avoid sharing confidential or active assessments; and
+- understand and be able to explain any solution they produce.
+
+The presence of a solution in this repository does not make its use permissible in every academic context. Responsibility for appropriate use remains with the student.
+
+---
+
+## Acknowledgements
+
+This archive was made possible by material collected through my own study and Teaching Assistant experiences, along with contributions and resources shared by instructors, classmates, seniors, students, and external academic sources.
+
+Thanks also to the students and Teaching Assistants whose notes, tutorials, solutions, and practice material helped make the collection more useful.
+
+The repository is maintained in the hope that future students will continue improving it and make difficult theoretical-computer-science material easier to access for those who come after them.
+````
