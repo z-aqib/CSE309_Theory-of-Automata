@@ -1,0 +1,2 @@
+for challenge problem 
+https://www.cs.umd.edu/users/gasarch/BLOGPAPERS/nfa.pdf
