@@ -1,0 +1,125 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{braket}
+
+
+\newcommand{\op}[1]{\operatorname{#1}}
+\newcommand{\tinyspace}{\mspace{1mu}}
+
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\bigabs}[1]{\bigl\lvert #1 \bigr\rvert}
+\newcommand{\Bigabs}[1]{\Bigl\lvert #1 \Bigr\rvert}
+\newcommand{\biggabs}[1]{\biggl\lvert #1 \biggr\rvert}
+\newcommand{\Biggabs}[1]{\Biggl\lvert #1 \Biggr\rvert}
+
+\renewcommand{\natural}{\mathbb{N}}
+\newcommand{\rev}{\textup{\tiny R}}
+
+\newenvironment{mylist}[1]{\begin{list}{}{
+	\setlength{\leftmargin}{#1}
+	\setlength{\rightmargin}{0mm}
+	\setlength{\labelsep}{2mm}
+	\setlength{\labelwidth}{8mm}
+	\setlength{\itemsep}{0mm}}}
+	{\end{list}}
+	
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CSE 309 Theory of Automata} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{#4}{#1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+Uv5jWysf3
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+\begin{document}
+
+\lecture{Problem Set 2}{\textit{Assigned: Monday, 9 Feb}}{Spring 2026}{Due: \textit{11:59 pm Monday, 23 Feb}}
+
+\centerline{{\Large To facilitate grading and timely feedback}}
+\centerline{{\Large please note that all submissions are through \href{http://gradescope.com}{Gradescope}.}}
+\centerline{{\Large Solve each problem on a new page.}}
+\centerline{{\Large Please clearly identify collaborator names and the resources used for each problem.}}
+
+\begin{enumerate}
+
+\item Argue whether each of the following statement is True or False. Give a short, high-level proof if the statement is True and a counter-example if the statement is False. Assume that $\Sigma = \{0,1\}$ and that $A$ and $B$ are languages over $\Sigma$ for each of the statements.
+
+\begin{enumerate}
+\item If $A$ is nonregular, then there exists a nonregular language $B$ such that $A \cap B$ is finite.
+\item If $A$ is nonregular, then there exists a nonregular language $B$ such that $A \cap B$ is infinite.
+\item If $A$ is infinite, there must exist a language $B \subseteq A$ that is nonregular.
+
+\item If $A$ is nonregular, $B$ is regular, and $A \cap B = \emptyset$, then $A \cup B$ is nonregular.
+\end{enumerate}
+
+\item Let $\Sigma$ be an alphabet. The symmetric difference of two languages $A, B \subseteq \Sigma^*$ is defined as 
+\begin{equation*}
+A \Delta B = \left( A \cap \overline{B} \right) \cup \left( \overline{A} \cap B \right).
+\end{equation*}
+\begin{enumerate}
+\item Prove that if $A \subseteq \Sigma^*$ is a context-free language and $B \subseteq \Sigma^*$ is a finite language, then the language  $A \Delta B$ is context-free.
+\item Give an example of an alphabet $\Sigma$, a context-free language $A \subseteq \Sigma^*$, an a regular language $B \subseteq \Sigma^*$ for which the language $A \Delta B$ is not context-free.
+\end{enumerate}
+
+\item Give a context-free grammar for each of the following languages. You do not need to prove that your grammars are correct. However, if it is too difficult to verify the correctness of your grammars, you may lose points (even if they happen to be correct). You should therefore aim to give the simplest grammars possible, and it may be to your benefit to offer short explanations about how your grammars work.
+
+\begin{enumerate}
+\item $L_1 = \{0^n1^m  \, | \, m \leq n \leq 2m\}$.
+\item $L_2 = \{w \in \{0,1\}^* \, | \, w = w^R \textrm{ and the number of $1$'s in $w$ is divisible by $3$}\}$.
+\item $L_3 = \{a^k b^n c^m \, | \, k,n,m \geq 0 \textrm{ and } k+n=m\}$.
+\item $L_4 = \{a^k b^n c^m \, | \, k,n,m \geq 0 \textrm{ and } k+m=n\}$.
+\end{enumerate}
+
+\item Let $C_{CFG} = \{\langle G,k \rangle \, | \, \textrm{ Language of CFG G contains exactly $k$ strings where $k\geq 0$ or $k=\infty$} \}.$ Show that $C_{CFG}$ is decidable.
+
+\item Sheikh Chilly has bought the latest Turing Machine model TM202x for mining cryptocurrency that uses one-sided unbounded (on the left) tape. Unfortunately the TM was damaged during delivery such that that transition function can only implement the following mapping. 
+\begin{equation*}
+\delta : Q \times \Gamma \mapsto Q \times \Gamma \times \{L, BACK \}.
+\end{equation*}
+
+If $\delta(q, a) = (r, b,BACK)$, when the machine is in state $q$ reading an $a$, the machine's head jumps back to the right-hand end of the tape after it writes $b$ on the tape and enters state $r$. In other words, instead of being able to move the head one cell right, it can only move back to the start of the tape on the right end. Show Sheikh Chilly how he can program this TM202x to simulate an undamaged TM. 
+
+\item \emph{Bonus Challege Problem:} What is the smallest NFA you can design for $\{a^n : n \neq 1003\}$. You should argue why your NFA is correct.
+\end{enumerate}
+\end{document}
